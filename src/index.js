@@ -1,19 +1,18 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
-import store from "./store/index";
-import {Provider} from 'react-redux';
-// import { add,subtract} from "./action/index";
+import { Provider } from 'react-redux';
+import store from './store';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App';
 
-ReactDOM.render(<Provider store={store}>
+ReactDOM.render(
+    //provider connects the react application to redux
+  <Provider store={store}>
     <App />
-    </Provider>, document.getElementById('root'));
-
-
-
-window.store = store;
-// window.add = add;
+  </Provider>,
+  document.getElementById('root')
+);
 
 
 
